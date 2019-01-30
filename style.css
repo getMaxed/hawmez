@@ -17,43 +17,62 @@ html {
 
 .sidebar {
     background-color: rgb(190, 150, 150);
+    grid-column: sidebar-start / sidebar-end;
+    grid-row: 1 / -1;
 }
 
 .header {
     background-color: rgb(156, 34, 34);
+    grid-column: full-start / col-end 6;
 }
 
 .realtors {
     background-color: rgb(40, 153, 68);
+    grid-column: col-start 7 / full-end;
 }
 
 .features {
     background-color: rgb(129, 126, 129);
+    grid-column: center-start / center-end;
 }
 
 .story-pictures {
     background-color: rgb(157, 218, 207);
+    grid-column: full-start / col-end 4;
 }
 
 .story-content {
     background-color: rgb(165, 120, 129);
+    grid-column: col-start 5 / full-end;
 }
 
 .homes {
     background-color: rgb(190, 224, 255);
+    grid-column: center-start / center-end;
 }
 
 .gallery {
     background-color: rgb(150, 149, 71);
+    grid-column: full-start / full-end;
 }
 
 .footer {
     background-color: rgb(210, 141, 219);
+    grid-column: full-start / full-end;
 }
 
 /* Grid */
 
+/* [center-start]/[col-start] : the beginning of the centered 8 grid columns */
+
 .container {
     display: grid;
     grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+    grid-template-columns:
+        [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr)
+        [center-start] repeat(
+            8,
+            [col-start] minmax(min-content, 14rem) [col-end]
+        )
+        [center-end] 1fr [full-end];
 }
