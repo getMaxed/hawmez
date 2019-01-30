@@ -1,0 +1,59 @@
+/* Normalize */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 10 px */
+}
+
+/* Main */
+
+.sidebar {
+    background-color: rgb(190, 150, 150);
+}
+
+.header {
+    background-color: rgb(156, 34, 34);
+}
+
+.realtors {
+    background-color: rgb(40, 153, 68);
+}
+
+.features {
+    background-color: rgb(129, 126, 129);
+}
+
+.story-pictures {
+    background-color: rgb(157, 218, 207);
+}
+
+.story-content {
+    background-color: rgb(165, 120, 129);
+}
+
+.homes {
+    background-color: rgb(190, 224, 255);
+}
+
+.gallery {
+    background-color: rgb(150, 149, 71);
+}
+
+.footer {
+    background-color: rgb(210, 141, 219);
+}
+
+/* Grid */
+
+.container {
+    display: grid;
+    grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+}
