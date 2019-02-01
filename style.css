@@ -13,7 +13,7 @@ html {
     font-size: 62.5%; /* 10 px */
 }
 
-/* Main */
+/* MAIN */
 
 .sidebar {
     background-color: rgb(190, 150, 150);
@@ -31,6 +31,38 @@ html {
     grid-column: col-start 7 / full-end;
 }
 
+.btn {
+    background-color: rgb(175, 42, 42);
+    color: #fff;
+    border: none;
+    border-radius: 0%;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 1.8rem 3rem;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.btn:hover {
+    background-color: rgb(97, 76, 76);
+}
+
+.mb-sm {
+    margin-bottom: 2rem;
+}
+
+.mb-md {
+    margin-bottom: 3rem;
+}
+
+.mb-lg {
+    margin-bottom: 4rem;
+}
+
+.mb-hg {
+    margin-bottom: 8rem;
+}
+
 /* FEATURES */
 
 .features {
@@ -40,7 +72,7 @@ html {
     margin: 15rem 0;
 
     display: grid;
-    /* grid-template-columns: repeat(3, 1fr); */
+    /* grid-template-columns: repeat(3, 1fr); : unresponsive */
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     grid-gap: 6rem;
     align-items: start;
@@ -68,22 +100,70 @@ html {
     grid-column-gap: 2rem;
 }
 
-.story-pictures {
+/* STORY */
+
+.story__pictures {
     background-color: rgb(157, 218, 207);
     grid-column: full-start / col-end 4;
+    background-image: url(img/back.jpg);
+
+    display: grid;
+
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
 }
 
-.story-content {
+.story__img--1 {
+    width: 100%;
+    grid-row: 2 / 6;
+    grid-column: 2 / 6;
+    box-shadow: 0 2rem 5rem rgba(#000 0.1);
+}
+
+.story__img--2 {
+    width: 115%;
+    grid-row: 4 / 6;
+    grid-column: 4 / 7;
+    z-index: 20;
+}
+
+.story__content {
     background-color: rgb(165, 120, 129);
     grid-column: col-start 5 / full-end;
+
+    padding: 6rem 8vw;
+
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; */
+
+    display: grid;
+    align-content: center;
+    justify-items: start;
 }
+
+.story__text {
+    margin-bottom: 4rem;
+}
+
+/* HOMES */
 
 .homes {
-    background-color: rgb(190, 224, 255);
     grid-column: center-start / center-end;
+    margin: 15rem 0;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 7rem;
 }
 
-.gallery {
+.home {
+    background-color: rgb(107, 89, 89);
+}
+
+.homes .gallery {
     background-color: rgb(150, 149, 71);
     grid-column: full-start / full-end;
 }
